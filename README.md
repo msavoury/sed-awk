@@ -4,8 +4,32 @@ sed-awk
 Use the -f option to specify a file 
 ```sed -f scriptfile inputfile```
 
-character classes:
-[:alpha:]
+Character classes:
+=================
+[:alnum:] Printable chars (includes whitespace)
+
+[:alpha:] Alphabetic chars
+
+[:blank:] Space and tab chars
+
+[:cntrl:] Control chars
+
+[:digit:] Numeric chars
+
+[:graph:] Printable and visible (non-space) chars
+
+[:lower:] Lowercase chars
+
+[:print:] Printable chars
+
+[:punct:] Punctuation chars
+
+[:space:] Whitespace chars
+
+[:upper:] Uppercase chars
+
+[:xdigit:] hexadecimal chars
+
 
 sed
 ===

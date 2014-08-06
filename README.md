@@ -34,15 +34,17 @@ Use the -f option to specify a file
 
 The ```-e``` option is only necessary when specifying more than one instruction via the command line
 
+The ** -r ** option allows use of extended regular expressions (|, ? , +, etc..)
+
 It's also possible to separate instructions with the use of a semicolon
 ```sed 's/ MA/Mass'; s/PA/Penn'```
 
 The ```-n``` option is used to suppress the output 
 
 ## Ranges ##
-With *grep* - escape the brackets: ```grep  '10\{1,3\}1' one_zero.txt ``` 
+With **grep** - escape the brackets: ```grep  '10\{1,3\}1' one_zero.txt ``` 
 
-With *egrep* - escaping is not needed: ```egrep  '10{1,3}1' one_zero.txt ```
+With **egrep** - escaping is not needed: ```egrep  '10{1,3}1' one_zero.txt ```
 
 
 # awk #

@@ -46,6 +46,19 @@ With **grep** - escape the brackets: ```grep  '10\{1,3\}1' one_zero.txt ```
 
 With **egrep** - escaping is not needed: ```egrep  '10{1,3}1' one_zero.txt ```
 
+## Line Addressing ##
+Sed commands can specify zero, one or two addresses. An address can be a regex, a line number, or a line addressing symbol (e.g. ^ and $)
+
+- No address: command applied to each line
+- One address: command applied to any line that matches address
+- 2 comma separated addresses: command applied to all matching lines within range (inclusive)
+- If an address is followed by an exclamation point (!) command applied to all non-matching lines
+
+Example of 2 address command
+```
+ sed -n '/3./,/7./s/[0-9]*/1/p' 1_to_100.txt 
+```
+
 
 # awk #
 The ```-F``` option is used to specify a different field separator

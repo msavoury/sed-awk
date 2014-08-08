@@ -29,6 +29,11 @@ Use the **-f** option to specify a file
 
 [:xdigit:] hexadecimal chars
 
+Example:
+```
+sed 's/[[:lower:]]/X/' the_times.txt 
+```
+
 
 # sed #
 
@@ -59,6 +64,18 @@ Example of 2 address command
  sed -n '/3./,/7./s/[0-9]*/1/p' 1_to_100.txt 
 ```
 If an address is followed by a (!) symbol, then the command will apply to all the lines that do **not** match the address
+
+## Substitution ##
+The pattern for substitution is:
+```
+[address]s/<pattern>/<replacement>/<flags>
+```
+Where <flags> can be:
+- **n** - A number (up to 512) indicating replacement occur on nth pattern
+- **g** - Make changes globally 
+- **p** - Print contents of pattern space 
+- **w <file>** - Write contents of pattern space to file 
+
 
 # awk #
 The ```-F``` option is used to specify a different field separator

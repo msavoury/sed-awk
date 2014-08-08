@@ -76,6 +76,9 @@ Where <flags> can be:
 - **p** - Print contents of pattern space 
 - **w <file>** - Write contents of pattern space to file 
 
+### Replacement characters ###
+- ** & ** is used for the match made
+- ** \n ** is for the nth match (based on pairs of parens in the pattern)
 
 # awk #
 The ```-F``` option is used to specify a different field separator

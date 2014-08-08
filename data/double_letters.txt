@@ -1,0 +1,3 @@
+This line has double letters
+It has some double vowels too
+

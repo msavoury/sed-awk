@@ -1,3 +1,3 @@
 #Example use of & char
 
-s/(([aeiou])([^aeiou]))/match was &/
+s/[aeiou][^aeiou]*/(&)/g

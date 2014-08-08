@@ -1,6 +1,6 @@
 # sed-awk #
 
-Use the -f option to specify a file 
+Use the **-f** option to specify a file 
 ```sed -f scriptfile inputfile```
 
 ## Character classes: ##

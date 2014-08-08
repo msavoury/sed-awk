@@ -32,7 +32,7 @@ Use the **-f** option to specify a file
 
 # sed #
 
-The ```-e``` option is only necessary when specifying more than one instruction via the command line
+The **-e** option is only necessary when specifying more than one instruction via the command line
 
 The ** -r ** option allows use of extended regular expressions (|, ? , +, etc..)
 

@@ -1,0 +1,6 @@
+comp:fusion
+boo:berry
+gift:card
+suit:case
+pea#nut
+

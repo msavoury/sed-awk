@@ -70,11 +70,11 @@ The pattern for substitution is:
 ```
 [address]s/<pattern>/<replacement>/<flags>
 ```
-Where &gt;flags&lt; can be:
+Where &lt;flags&gt; can be:
 - **n** - A number (up to 512) indicating replacement occur on nth pattern
 - **g** - Make changes globally 
 - **p** - Print contents of pattern space 
-- **w <file>** - Write contents of pattern space to file 
+- **w (file)** - Write contents of pattern space to file 
 
 ### Replacement characters ###
 - **&** is used for the match made

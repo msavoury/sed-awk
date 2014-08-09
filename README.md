@@ -20,6 +20,11 @@ Use the **-f** option to specify a file
 |[:upper:]| Uppercase chars
 |[:xdigit:]| hexadecimal chars
 
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+
 Example Character class usage:
 ```
 sed 's/[[:lower:]]/X/' the_times.txt 

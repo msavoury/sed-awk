@@ -20,9 +20,9 @@ Use the **-f** option to specify a file
 |[:upper:]| Uppercase chars
 |[:xdigit:]| hexadecimal chars
 
-| First Header  | Second Header |
+| Character Class  | Purpose |
 | ------------- | ------------- |
-| Content Cell  | Content Cell  |
+| [:alnum:]  | Printable chars |
 | Content Cell  | Content Cell  |
 
 Example Character class usage:

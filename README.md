@@ -24,15 +24,15 @@ Use the **-f** option to specify a file
 **Example usage:** ``` sed 's/[[:lower:]]/X/' the_times.txt ```
 
 # sed #
+## Options##
 
-The **-e** option is only necessary when specifying more than one instruction via the command line
+**-e** - necessary when specifying more than one instruction on the command line
 
-The ** -r ** option allows use of extended regular expressions (|, ? , +, etc..)
+**-r** - allows use of extended regular expressions (|, ? , +, etc..)
 
-It's also possible to separate instructions with the use of a semicolon
-```sed 's/ MA/Mass'; s/PA/Penn'```
+**;** - separate instructions on command line ```sed 's/ MA/Mass'; s/PA/Penn'```
 
-The ```-n``` option is used to suppress the output 
+**-n** - is used to suppress output 
 
 ## Ranges ##
 With **grep** - escape the brackets: ```grep  '10\{1,3\}1' one_zero.txt ``` 

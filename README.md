@@ -7,23 +7,35 @@ Use the **-f** option to specify a file
 
 |Code | Purpose
 |----------------------------------------------
-|[:alnum:]| Printable chars (includes whitespace)
-|[:alpha:]| Alphabetic chars
-|[:blank:]| Space and tab chars
-|[:cntrl:]| Control chars
-|[:digit:]| Numeric chars
-|[:graph:]| Printable and visible (non-space) chars
-|[:lower:]| Lowercase chars
-|[:print:]| Printable chars
-|[:punct:]| Punctuation chars
-|[:space:]| Whitespace chars
-|[:upper:]| Uppercase chars
-|[:xdigit:]| hexadecimal chars
+|[:alnum:]| Printable chars (includes whitespace)|
+|[:alpha:]| Alphabetic chars|
+|[:blank:]| Space and tab chars|
+|[:cntrl:]| Control chars|
+|[:digit:]| Numeric chars|
+|[:graph:]| Printable and visible (non-space) chars|
+|[:lower:]| Lowercase chars|
+|[:print:]| Printable chars|
+|[:punct:]| Punctuation chars|
+|[:space:]| Whitespace chars|
+|[:upper:]| Uppercase chars|
+|[:xdigit:]| hexadecimal chars|
 
 | Character Class  | Purpose |
 | ------------- | ------------- |
 | [:alnum:]  | Printable chars |
-| Content Cell  | Content Cell  |
+|[:alnum:]| Printable chars (includes whitespace)|
+|[:alpha:]| Alphabetic chars|
+|[:blank:]| Space and tab chars|
+|[:cntrl:]| Control chars|
+|[:digit:]| Numeric chars|
+|[:graph:]| Printable and visible (non-space) chars|
+|[:lower:]| Lowercase chars|
+|[:print:]| Printable chars|
+|[:punct:]| Punctuation chars|
+|[:space:]| Whitespace chars|
+|[:upper:]| Uppercase chars|
+|[:xdigit:]| hexadecimal chars|
+
 
 Example Character class usage:
 ```

@@ -53,11 +53,12 @@ Example of 2 address command
 ```
 If an address is followed by a (!) symbol, then the command will apply to all the lines that do **not** match the address
 
-## Substitution ##
+## Commands ##
+
+### Substitution ###
 The pattern for substitution is:
-```
-[address]s/<pattern>/<replacement>/<flags>
-```
+``` [address]s/<pattern>/<replacement>/<flags> ```
+
 Where &lt;flags&gt; can be:
 - **n** - A number (up to 512) indicating replacement occur on nth pattern
 - **g** - Make changes globally 

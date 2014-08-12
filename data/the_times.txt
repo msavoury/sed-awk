@@ -1,3 +1,4 @@
 This line has contains the word
 This line has the word the in it twice
 This line has the word the in it another time so now the number is 3 
+A line here has the word also

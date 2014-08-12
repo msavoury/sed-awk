@@ -71,6 +71,14 @@ Where &lt;flags&gt; can be:
 - **&** is used for the match made
 - **\n** is for the nth match (based on pairs of parens in the pattern)
 
+### Delete (d) ###
+Takes an address and deletes pattern space if line matches address
+
+Example: delete all lines that start with capital 'T'
+```
+sed '/^T/d' data/the_times.txt
+```
+
 ### List (l) ###
 Use to print non-printing characters as ASCII codes
 - Tip: Use -n to suppress normal output
@@ -80,14 +88,20 @@ sed -n l data/*
 
 ### Transform (y) ###
 Use to transform characters of one set to characters of a second set
+
 - Tip: The length of both sets must be equal
 Example: Change each letter 'a' to a '1' and each 'b' to a '2'
 ```
 sed 'y/ab/12/' data/the_times.txt
 ```
 
-### Other commands ###
-- Next
+### Next (n) ###
+Reads the content of the pattern space then reads next line of input w/o returning to the top of the script
+- Tip: This command is normally used in combination with other commands in a script
+
+## Grouping Commands ##
+Use curly brackets to group commands for a matched line
+
 
 # awk #
 The ```-F``` option is used to specify a different field separator

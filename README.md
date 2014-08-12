@@ -79,6 +79,16 @@ Example: delete all lines that start with capital 'T'
 sed '/^T/d' data/the_times.txt
 ```
 
+### Append (a) / Change (c) / Insert (i) ###
+- Each of these commands requires a backslash following it to escape the first end-of-line. Text must begin on the next line
+
+Example: Prepend each line with an asterisk
+```
+sed '/^/i\
+*' data/the_times.txt
+
+```
+
 ### List (l) ###
 Use to print non-printing characters as ASCII codes
 - Tip: Use -n to suppress normal output

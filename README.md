@@ -80,6 +80,11 @@ Where &lt;flags&gt; can be:
 - **&** is used for the match made
 - **\n** is for the nth match (based on pairs of parens in the pattern)
 
+### Other commands ###
+- List
+- Transfrom
+- Next
+
 # awk #
 The ```-F``` option is used to specify a different field separator
 

@@ -26,11 +26,12 @@ Use the **-f** option to specify a file
 # sed #
 ## Options##
 
-**-e** - necessary when specifying more than one instruction on the command line
+**-e** - Use when specifying more than one instruction on the command line
+```sed -e 's/line/loan/' -e 's/word/wizard/' data/the_times.txt```
 
 **-r** - allows use of extended regular expressions (|, ? , +, etc..)
 
-**;** - separate instructions on command line ```sed 's/ MA/Mass'; s/PA/Penn'```
+**;** - separate instructions on command line ```sed 's/ MA/Mass; s/PA/Penn'```
 
 **-n** - is used to suppress output 
 

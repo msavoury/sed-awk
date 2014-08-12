@@ -131,6 +131,13 @@ sed '/match/=' data/the_times.txt
 
 ## Grouping Commands ##
 Use curly brackets to group commands for a matched line
+```
+/This/{
+    s/^Th/h/
+    =   
+    y/o/e/
+}
+```
 
 ## Misc ##
 

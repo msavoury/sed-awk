@@ -57,8 +57,8 @@ If an address is followed by a (!) symbol, then the command will apply to all th
 
 ## Commands ##
 
-### Substitution ###
-The pattern for substitution is:
+### Substitution (s) ###
+Syntax: 
 ``` [address]s/<pattern>/<replacement>/<flags> ```
 
 Where &lt;flags&gt; can be:
@@ -67,13 +67,26 @@ Where &lt;flags&gt; can be:
 - **p** - Print contents of pattern space 
 - **w (file)** - Write contents of pattern space to file 
 
-### Replacement characters ###
+#### Replacement characters ####
 - **&** is used for the match made
 - **\n** is for the nth match (based on pairs of parens in the pattern)
 
+### List (l) ###
+Use to print non-printing characters as ASCII codes
+- Tip: Use -n to suppress normal output
+```
+sed -n l data/*
+```
+
+### Transform (y) ###
+Use to transform characters of one set to characters of a second set
+- Tip: The length of both sets must be equal
+Example: Change each letter 'a' to a '1' and each 'b' to a '2'
+```
+sed 'y/ab/12/' data/the_times.txt
+```
+
 ### Other commands ###
-- List
-- Transfrom
 - Next
 
 # awk #

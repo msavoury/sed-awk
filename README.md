@@ -16,11 +16,6 @@ Use the **-f** option to specify a file
 
 **-n** - use to suppress output 
 
-## Ranges ##
-With **grep** - escape the brackets: ```grep  '10\{1,3\}1' one_zero.txt ``` 
-
-With **egrep** - escaping is not needed: ```egrep  '10{1,3}1' one_zero.txt ```
-
 ## Line Addressing ##
 Sed commands can specify zero, one or two addresses. An address can be a regex, a line number, or a line addressing symbol (e.g. ^ and $)
 

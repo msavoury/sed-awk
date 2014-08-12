@@ -26,14 +26,15 @@ Use the **-f** option to specify a file
 # sed #
 ## Options##
 
-**-e** - Use when specifying more than one instruction on the command line
+**-e** - Use to specify multiple instructions on the command line
+
 ```sed -e 's/line/loan/' -e 's/word/wizard/' data/the_times.txt```
 
 **-r** - allows use of extended regular expressions (|, ? , +, etc..)
 
 **;** - separate instructions on command line ```sed 's/ MA/Mass; s/PA/Penn'```
 
-**-n** - is used to suppress output 
+**-n** - use to suppress output 
 
 ## Ranges ##
 With **grep** - escape the brackets: ```grep  '10\{1,3\}1' one_zero.txt ``` 

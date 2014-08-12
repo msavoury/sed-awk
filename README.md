@@ -49,7 +49,12 @@ Sed commands can specify zero, one or two addresses. An address can be a regex, 
 - 2 comma separated addresses: command applied to all matching lines within range (inclusive)
 - If an address is followed by an exclamation point (!) command applied to all non-matching lines
 
-Example of 2 address command
+Example: Match (and print) the 3rd line
+```
+sed -n '3 p' data/the_times.txt
+```
+
+Example of a 2-address command
 ```
  sed -n '/3./,/7./s/[0-9]*/1/p' 1_to_100.txt 
 ```
@@ -109,8 +114,26 @@ sed 'y/ab/12/' data/the_times.txt
 Reads the content of the pattern space then reads next line of input w/o returning to the top of the script
 - Tip: This command is normally used in combination with other commands in a script
 
+### Print (p) and Line Number (=)
+The p command will print the matched line
+- Tip: Use the p command when suppressing output to print matched lines 
+
+Example: Print the first line twice (once as normal output, once for matching first line)
+```
+sed '1 p' data/the_times.txt
+```
+The (=) command prints the line number of the matched line
+
+Example: Print line numbers of lines containing the word 'match'
+```
+sed '/match/=' data/the_times.txt
+```
+
 ## Grouping Commands ##
 Use curly brackets to group commands for a matched line
+
+## Misc ##
+
 
 
 # awk #

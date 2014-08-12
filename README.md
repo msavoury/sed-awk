@@ -4,47 +4,35 @@ Use the **-f** option to specify a file
 ```sed -f scriptfile inputfile```
 
 ## Character classes: ##
-=================
-[:alnum:] Printable chars (includes whitespace)
 
-[:alpha:] Alphabetic chars
+| Character Class  | Purpose |
+| ------------- | ------------- |
+|[:alnum:]  | Printable chars |
+|[:alnum:]| Printable chars (includes whitespace)|
+|[:alpha:]| Alphabetic chars|
+|[:blank:]| Space and tab chars|
+|[:cntrl:]| Control chars|
+|[:digit:]| Numeric chars|
+|[:graph:]| Printable and visible (non-space) chars|
+|[:lower:]| Lowercase chars|
+|[:print:]| Printable chars|
+|[:punct:]| Punctuation chars|
+|[:space:]| Whitespace chars|
+|[:upper:]| Uppercase chars|
+|[:xdigit:]| hexadecimal chars|
 
-[:blank:] Space and tab chars
-
-[:cntrl:] Control chars
-
-[:digit:] Numeric chars
-
-[:graph:] Printable and visible (non-space) chars
-
-[:lower:] Lowercase chars
-
-[:print:] Printable chars
-
-[:punct:] Punctuation chars
-
-[:space:] Whitespace chars
-
-[:upper:] Uppercase chars
-
-[:xdigit:] hexadecimal chars
-
-Example:
-```
-sed 's/[[:lower:]]/X/' the_times.txt 
-```
-
+**Example usage:** ``` sed 's/[[:lower:]]/X/' the_times.txt ```
 
 # sed #
+## Options##
 
-The **-e** option is only necessary when specifying more than one instruction via the command line
+**-e** - necessary when specifying more than one instruction on the command line
 
-The ** -r ** option allows use of extended regular expressions (|, ? , +, etc..)
+**-r** - allows use of extended regular expressions (|, ? , +, etc..)
 
-It's also possible to separate instructions with the use of a semicolon
-```sed 's/ MA/Mass'; s/PA/Penn'```
+**;** - separate instructions on command line ```sed 's/ MA/Mass'; s/PA/Penn'```
 
-The ```-n``` option is used to suppress the output 
+**-n** - is used to suppress output 
 
 ## Ranges ##
 With **grep** - escape the brackets: ```grep  '10\{1,3\}1' one_zero.txt ``` 
@@ -65,11 +53,12 @@ Example of 2 address command
 ```
 If an address is followed by a (!) symbol, then the command will apply to all the lines that do **not** match the address
 
-## Substitution ##
+## Commands ##
+
+### Substitution ###
 The pattern for substitution is:
-```
-[address]s/<pattern>/<replacement>/<flags>
-```
+``` [address]s/<pattern>/<replacement>/<flags> ```
+
 Where &lt;flags&gt; can be:
 - **n** - A number (up to 512) indicating replacement occur on nth pattern
 - **g** - Make changes globally 

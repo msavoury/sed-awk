@@ -3,26 +3,6 @@
 Use the **-f** option to specify a file 
 ```sed -f scriptfile inputfile```
 
-## Character classes: ##
-
-| Character Class  | Purpose |
-| ------------- | ------------- |
-|[:alnum:]  | Printable chars |
-|[:alnum:]| Printable chars (includes whitespace)|
-|[:alpha:]| Alphabetic chars|
-|[:blank:]| Space and tab chars|
-|[:cntrl:]| Control chars|
-|[:digit:]| Numeric chars|
-|[:graph:]| Printable and visible (non-space) chars|
-|[:lower:]| Lowercase chars|
-|[:print:]| Printable chars|
-|[:punct:]| Punctuation chars|
-|[:space:]| Whitespace chars|
-|[:upper:]| Uppercase chars|
-|[:xdigit:]| hexadecimal chars|
-
-**Example usage:** ``` sed 's/[[:lower:]]/X/' the_times.txt ```
-
 # sed #
 ## Options##
 
@@ -140,7 +120,25 @@ Use curly brackets to group commands for a matched line
 ```
 
 ## Misc ##
+### Character classes: ###
 
+| Character Class  | Purpose |
+| ------------- | ------------- |
+|[:alnum:]  | Printable chars |
+|[:alnum:]| Printable chars (includes whitespace)|
+|[:alpha:]| Alphabetic chars|
+|[:blank:]| Space and tab chars|
+|[:cntrl:]| Control chars|
+|[:digit:]| Numeric chars|
+|[:graph:]| Printable and visible (non-space) chars|
+|[:lower:]| Lowercase chars|
+|[:print:]| Printable chars|
+|[:punct:]| Punctuation chars|
+|[:space:]| Whitespace chars|
+|[:upper:]| Uppercase chars|
+|[:xdigit:]| hexadecimal chars|
+
+**Example usage:** ``` sed 's/[[:lower:]]/X/' the_times.txt ```
 
 
 # awk #

@@ -1,4 +1,5 @@
 # sed-awk #
+A github repo for the purpose of learning more of these 2 unix utilities
 
 Use the **-f** option to specify a file 
 ```sed -f scriptfile inputfile```
@@ -140,3 +141,13 @@ Use curly brackets to group commands for a matched line
 The ```-F``` option is used to specify a different field separator
 
 Awk variables are initialized to an empty string
+
+BEGIN
+
+The BEGIN pattern specifies actions that will be taken before the first line of input is read
+
+The END pattern specifies actions that will be taken after the last line of input is read
+
+``` awk 'BEGIN {print "This will be the first line"} {print $0} END {print "This will be printed last"}' data/list ```
+
+

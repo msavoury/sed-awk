@@ -140,6 +140,11 @@ Use curly brackets to group commands for a matched line
 # awk #
 The ```-F``` option is used to specify a different field separator
 
+Example: Use the colon as a field separator
+```
+awk -F: -f scripts/print_second.awk data/colon_data.txt
+```
+
 Awk variables are initialized to an empty string
 
 BEGIN
@@ -150,4 +155,16 @@ The END pattern specifies actions that will be taken after the last line of inpu
 
 ``` awk 'BEGIN {print "This will be the first line"} {print $0} END {print "This will be printed last"}' data/list ```
 
+FS
 
+The FS variable is a system variable that can be initialized to set the field separator 
+
+```BEGIN { FS = ","} ```
+
+
+The tilde (~) operator allows for testing of a regular expression against a field
+
+Example: print 1st and 6th fields if the 5th field matches /TU/
+```
+$5 ~ /TU/ { print $1, $6}
+```

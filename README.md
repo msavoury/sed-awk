@@ -155,6 +155,8 @@ The END pattern specifies actions that will be taken after the last line of inpu
 
 ``` awk 'BEGIN {print "This will be the first line"} {print $0} END {print "This will be printed last"}' data/list ```
 
+
+## Variables ##
 FS
 
 The FS variable is a system variable that can be initialized to set the field separator 
@@ -166,6 +168,38 @@ If **FS** set to a string of 2 chars or more, it is interpreted as a regular exp
 Example: Use either quote, colon or tab as a field delimeter
 ``` FS = "[':\t']"```
 
+OFS (Output Field Separator)
+
+
+NF (number of fields for the current record)
+Example, print the number of fields in the current record
+```
+awk '{print NF}'
+```
+
+RS (Record Separator)
+- default value is newline
+- when this is set to "" it stands for a blank line
+
+
+ORS (Output Record Separator)
+- default value is newline
+
+NR 
+- Number of the current record
+
+FILENAME
+- Current filename
+
+FNR
+- Current record relative to current file
+
+
+## Operators ##
+In Awk, the space is the string concatenation operator
+```
+Z = "hello " "world"
+```
 
 The tilde (~) operator allows for testing of a regular expression against a field
 
@@ -173,10 +207,3 @@ Example: print 1st and 6th fields if the 5th field matches /TU/
 ```
 $5 ~ /TU/ { print $1, $6}
 ```
-
-## Variables ##
-In Awk, the space is the strin concatenation operator
-```
-Z = "hello " "world"
-```
-

@@ -161,6 +161,11 @@ The FS variable is a system variable that can be initialized to set the field se
 
 ```BEGIN { FS = ","} ```
 
+If **FS** set to a string of 2 chars or more, it is interpreted as a regular expression
+
+Example: Use either quote, colon or tab as a field delimeter
+``` FS = "[':\t']"```
+
 
 The tilde (~) operator allows for testing of a regular expression against a field
 
@@ -168,3 +173,10 @@ Example: print 1st and 6th fields if the 5th field matches /TU/
 ```
 $5 ~ /TU/ { print $1, $6}
 ```
+
+## Variables ##
+In Awk, the space is the strin concatenation operator
+```
+Z = "hello " "world"
+```
+

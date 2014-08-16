@@ -157,10 +157,11 @@ The END pattern specifies actions that will be taken after the last line of inpu
 
 
 ## Variables ##
-### FS
+###FS (Field Separator)###
 
 The FS variable is a system variable that can be initialized to set the field separator 
 
+Example:
 ```BEGIN { FS = ","} ```
 
 If **FS** set to a string of 2 chars or more, it is interpreted as a regular expression
@@ -169,10 +170,11 @@ Example: Use either quote, colon or tab as a field delimeter
 ``` FS = "[':\t']"```
 
 ###OFS (Output Field Separator)###
+- Separates the fields during output
 
 
 ###NF (number of fields for the current record)###
-Example, print the number of fields in the current record
+Example: print the number of fields in the current record
 ```
 awk '{print NF}'
 ```

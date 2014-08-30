@@ -212,3 +212,32 @@ Example: print 1st and 6th fields if the 5th field matches /TU/
 ```
 $5 ~ /TU/ { print $1, $6}
 ```
+
+## Command line Arguments##
+Pass arguments before the input file but after the awk script file
+``` awk -f scripts/args.awk high=100 data/proc.txt```
+**NOTE:** Arguments passed via the command line are **NOT** available during the BEGIN section of a script
+
+## Programming Constructs ##
+
+### Normal ###
+- if 
+- else
+- else if
+- ? :
+- while
+- for
+- break
+- continue
+
+### Different ###
+- in (e.g. for element IN array)
+- in (testing for membership - if needle IN haystack - TESTS for the presences of the KEY only, not the value)
+- split(string, array, separator)
+- delete array[subscript]
+
+### Special ###
+- next
+- exit (Immediately passes control to the END rule)
+
+

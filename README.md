@@ -187,14 +187,17 @@ awk '{print NF}'
 ###ORS (Output Record Separator)###
 - default value is newline
 
-###NR ###
-- Number of the current record
+###NR###
+- Number of the current record from all input
+
+###FNR###
+- Current record number relative to current file
+
+**NOTE** :  If given more than one file argument, the NR variable will keep track of the current record over all files, (i.e. when encountering the first record of the 2nd file, the value of NR will be Total number of records in first file + 1)
 
 ###FILENAME###
 - Current filename
 
-###FNR###
-- Current record relative to current file
 
 
 ## Operators ##

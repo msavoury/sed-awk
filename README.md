@@ -248,7 +248,9 @@ Arrays are one-based
 - ARGC
 - ENVIRON
 
-## String Functions ##
+## Functions ##
+
+### String Functions ###
 
 | Name                            | Description     |
 | -------------                   | -------------   |
@@ -264,3 +266,5 @@ Arrays are one-based
 | toupper(s)                      | returns s as upperrcase                                                        |
 
 **NOTE** remember awk arrays are 1-based so returning 0 makes sense for when a substring is not found
+
+### User-Defined Functions ###

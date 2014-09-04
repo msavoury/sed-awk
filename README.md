@@ -240,4 +240,26 @@ Pass arguments before the input file but after the awk script file
 - next
 - exit (Immediately passes control to the END rule)
 
+## Arrays ##
+Arrays are one-based
 
+## System Variables ##
+- ARGV (This array is 0 based)
+- ARGC
+- ENVIRON
+
+## String Functions ##
+
+| Name                            | Description     |
+| -------------                   | -------------   |
+| gsub(regex,replacement,input)   | globally substitute all instances of regex with replacement in input           |
+| index(needle, haystack)         | returns position of substring t in string s or zero if not present             |
+| length(s)                       | returns length of string s                                                     |
+| match(s,r)                      | returns either the position in s where the regex r begins or 0 if none found   |
+| split(string,array,separator)   | split string into array using separator and returns the number of elements     |
+| sub(regex,replacement,input)    | substitute first instances of regex with replacement in input, return 1 if success 0 otherwise |
+| substr(input,start,length  )    | return substring of input starting at start with given length                  |
+| tolower(s)                      | returns s as lowercase                                                         |
+| toupper(s)                      | returns s as upperrcase                                                         |
+
+**NOTE** remember awk arrays are 1-based so returning 0 makes sense for when a substring is not found

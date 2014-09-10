@@ -231,10 +231,10 @@ Pass arguments before the input file but after the awk script file
 - continue
 
 ### Different ###
-- in (e.g. for element IN array)
-- in (testing for membership - if needle IN haystack - TESTS for the presences of the KEY only, not the value)
-- split(string, array, separator)
-- delete array[subscript]
+- **in** (e.g. for element IN array)
+- **in** (testing for membership - if needle IN haystack - TESTS for the presences of the KEY only, not the value)
+- **split(string, array, separator)**
+- **delete** array[subscript]
 
 ### Special ###
 - next

@@ -268,3 +268,7 @@ Arrays are one-based
 **NOTE** remember awk arrays are 1-based so returning 0 makes sense for when a substring is not found
 
 ### User-Defined Functions ###
+- A user defined function can be placed anywhere that a pattern matching rule block can be placed
+- When calling a user function, there can't be any spaces between the function name and the left parenthesis
+- Variables defined INSIDE a function are global, and can be accessed outside the function
+- Declare local variables within the parameter list of a function to avoid them from becoming global

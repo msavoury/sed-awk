@@ -251,6 +251,10 @@ Arrays are one-based
 ## Functions ##
 
 ### String Functions ###
+#### gsub
+```
+{ gsub(/Britain/, "United Kingdom"); print }
+```
 
 | Name                            | Description     |
 | -------------                   | -------------   |

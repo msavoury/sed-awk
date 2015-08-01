@@ -252,6 +252,7 @@ Arrays are one-based
 
 ### String Functions ###
 #### gsub
+If the variable to search and alter (target) is omitted, then the entire input record ($0) is used. 
 ```
 { gsub(/Britain/, "United Kingdom"); print }
 ```

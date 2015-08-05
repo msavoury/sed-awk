@@ -251,8 +251,15 @@ Arrays are one-based
 ## Functions ##
 
 ### String Functions ###
-#### gsub : ```gsub(regex, replacement, input)```
-If the variable to search and alter (target) is omitted, then the entire input record ($0) is used. 
+#### sub : ```sub(regex, replacement, target)```
+Performs substitution of regex with FIRST instance of replacement in target. If the variable to search and alter (target) is omitted, then the entire input record $0 is used. 
+Returns 1 if succesful, 0 otherwise
+```
+{ sub(/a/, "1", "an apple a day keeps the doctor away"); print }//string becomes "1n apple a day keeps the doctor away"
+```
+
+#### gsub : ```gsub(regex, replacement, target)```
+Performs global substitution of regex with replacement in target. If the variable to search and alter (target) is omitted, then the entire input record ($0) is used. 
 ```
 { gsub(/Britain/, "United Kingdom"); print }
 ```
@@ -264,18 +271,46 @@ Returns the position of substring <needle> in string <haystack> or zero if not p
 { position = index("cat", "catastrophe")}
 ```
 
-| Name                            | Description     |
-| -------------                   | -------------   |
-| gsub(regex,replacement,input)   | globally substitute all instances of regex with replacement in input           |
-| index(needle, haystack)         | returns position of substring t in string s or zero if not present             |
-| length(s)                       | returns length of string s                                                     |
-| match(s,r)                      | returns either the position in s where the regex r begins or 0 if none found   |
-| split(string,array,separator)   | split string into array using separator and returns the number of elements     |
-| sprintf("fmt",input)            | returns printf formatfor input                                                 |
-| sub(regex,replacement,input)    | substitute first instances of regex with replacement in input, return 1 if success 0 otherwise |
-| substr(input,start,length  )    | return substring of input starting at start with given length                  |
-| tolower(s)                      | returns s as lowercase                                                         |
-| toupper(s)                      | returns s as upperrcase                                                        |
+#### length: ```length(s)```
+Returns length of string s
+```
+{ strLength = length("cat"); print strLength;}//prints 3
+```
+
+#### match: ```match(s, regex)```
+Returns either the position in s where regex r begins or 0 if none found
+```
+{ matchPosition = match("I have 1 cat", /cat/); print matchPosition;}//prints 10
+```
+
+#### split: ```split(string, array, separator)```
+Split string into array using separator and returns the number of elements     
+```
+{s = split("1,2,4", nums, ","); print s; print nums[2];} //prints 3 then prints 2
+```
+
+#### substr: ```substr(input, start, length)```
+return substring of input starting at start with given length
+```
+{s = substr("A man with a plan", 2, 4); print s;} //prints " man"
+```
+
+#### tolower: ```tolower(s)```
+return s as lowercase
+```
+{s = tolower("A Man With a Plan"); print s;} //prints "a man with a plan"
+```
+#### toupper: ```toupper(s)```
+return s as uppercase
+```
+{s = toupper("A Man With a Plan"); print s;} //prints "A MAN WITH A PLAN"
+```
+#### sprintf: ```sprintf(fmt, input)```
+returns printf format for input
+```
+- positional specifiers
+{s = sprintf("please %2 %1", "panic", "dont"); print s;} //prints "please dont panic"
+```
 
 **NOTE** remember awk arrays are 1-based so returning 0 makes sense for when a substring is not found
 

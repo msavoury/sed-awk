@@ -257,7 +257,7 @@ If the variable to search and alter (target) is omitted, then the entire input r
 { gsub(/Britain/, "United Kingdom"); print }
 ```
 
-#### index
+#### index: ```index(needle, haystack)```
 Returns the position of substring <needle> in string <haystack> or zero if not present
 **NOTE** Strings in awk are 1-based
 ```

@@ -257,6 +257,13 @@ If the variable to search and alter (target) is omitted, then the entire input r
 { gsub(/Britain/, "United Kingdom"); print }
 ```
 
+#### index
+Returns the position of substring <needle> in string <haystack> or zero if not present
+**NOTE** Strings in awk are 1-based
+```
+{ position = index("cat", "catastrophe")}
+```
+
 | Name                            | Description     |
 | -------------                   | -------------   |
 | gsub(regex,replacement,input)   | globally substitute all instances of regex with replacement in input           |

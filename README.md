@@ -251,7 +251,7 @@ Arrays are one-based
 ## Functions ##
 
 ### String Functions ###
-#### gsub - global substitution
+#### gsub : ```gsub(regex, replacement, input)```
 If the variable to search and alter (target) is omitted, then the entire input record ($0) is used. 
 ```
 { gsub(/Britain/, "United Kingdom"); print }

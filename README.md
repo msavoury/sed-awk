@@ -2,7 +2,7 @@
 A github repo for the purpose of learning more of these 2 unix utilities
 
 Use the **-f** option to specify a file 
-```sed -f scriptfile inputfile```
+```sed -f <scriptfile> <inputfile>```
 
 # sed #
 ## Options##

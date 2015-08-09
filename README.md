@@ -1,22 +1,21 @@
 # sed-awk #
 A github repo for the purpose of learning more of these 2 unix utilities
 
-Use the **-f** option to specify a file 
-```sed -f <scriptfile> <inputfile>```
+# sed
+Sed commands have the following general syntax:
+```
+[address[,address]][!]command [arguments]
+```
+Multiple commands can be separted with a semicolon:
+```sed 's/MA/Mass; s/PA/Penn; s/TN/Tenn'```
 
-# sed #
-## Options##
-
-**-e** - Use to specify multiple instructions on the command line
-
-```sed -e 's/line/loan/' -e 's/word/wizard/' data/the_times.txt```
-
-**-r** - allows use of extended regular expressions (|, ? , +, etc..)
-
-**;** - separate instructions on command line ```sed 's/ MA/Mass; s/PA/Penn'```
-
-**-n** - use to suppress output 
-
+## Options
+```
+-f : specify a file : sed -f <scriptfile> <inputfile>
+-e : specify multiple instructions : sed -e 's/line/loan/' -e 's/word/wizard/' data/the_times.txt
+-r : use extended regular expressions (|, ? , +, etc..)
+-n : suppress output
+```
 ## Line Addressing ##
 Sed commands can specify zero, one or two addresses. An address can be a regex, a line number, or a line addressing symbol (e.g. ^ and $)
 

@@ -17,14 +17,14 @@ Multiple commands can be separted with a semicolon:
 -n : suppress output
 ```
 ## Line Addressing ##
-Sed commands can specify zero, one or two addresses. An address can be a regex, a line number, or a line addressing symbol (e.g. ^ and $)
+Commands can specify zero, one or two addresses. An address can be a regex, a line number, or a line addressing symbol (e.g. ^ and $)
 
 - No address: command applied to each line
 - One address: command applied to any line that matches address
 - 2 comma separated addresses: command applied to all matching lines within range (inclusive)
 - If an address is followed by an exclamation point (!) command applied to all non-matching lines
 
-Example: Match (and print) the 3rd line
+Match (and print) the 3rd line:
 ```
 sed -n '3 p' data/the_times.txt
 ```

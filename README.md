@@ -24,9 +24,8 @@ Commands can specify zero, one or two addresses. An address can be a regex, a li
 - 2 comma separated addresses: command applied to all matching lines within range (inclusive)
 - If an address is followed by an exclamation point (!) command applied to all non-matching lines
 
-Match (and print) the 3rd line:
 ```
-sed -n '3 p' data/the_times.txt
+sed -n '3 p' data/the_times.txt  //Print the 3rd line
 ```
 
 Example of a 2-address command

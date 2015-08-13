@@ -26,11 +26,7 @@ Commands can specify zero, one or two addresses. An address can be a regex, a li
 
 ```
 sed -n '3 p' data/the_times.txt  //Print the 3rd line
-```
-
-Example of a 2-address command
-```
- sed -n '/3./,/7./s/[0-9]*/1/p' 1_to_100.txt 
+sed -n '/3./,/7./s/[0-9]*/1/p' 1_to_100.txt //Find lines btw 1st line starting with a 3 to first line beginning with a 7, then replace the first digit of each of those lines with a '1' then print 
 ```
 If an address is followed by a (!) symbol, then the command will apply to all the lines that do **not** match the address
 

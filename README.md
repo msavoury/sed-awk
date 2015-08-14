@@ -35,7 +35,7 @@ If an address is followed by a (!) symbol, then the command will apply to all th
 ### Substitution (s) 
 ####``` [address] s/<pattern>/<replacement>/<flags> ```
 
-Where &lt;flags&gt; can be:
+Where ```<flags>``` can be:
 - **n** - A number (up to 512) indicating replacement occur on nth pattern
 - **g** - Make changes globally 
 - **p** - Print contents of pattern space 

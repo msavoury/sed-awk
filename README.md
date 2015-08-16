@@ -45,6 +45,10 @@ Where ```<flags>``` can be:
 - **&** is used for the match made
 - **\n** is for the nth match (based on pairs of parens in the pattern)
 
+```
+s/Mr/Mister/g //Replace 'Mr' with 'Mister'
+```
+
 ### Delete (d) ###
 Takes an address and deletes pattern space if line matches address
 

@@ -52,8 +52,9 @@ s/Mr/Mister/g //Replace 'Mr' with 'Mister'
 ### Delete (d) ###
 Takes an address and deletes pattern space if line matches address
 
-Example: delete all lines that start with capital 'T'
+
 ```
+//ex: delete all lines that start with a capital 'T'
 sed '/^T/d' data/the_times.txt
 ```
 

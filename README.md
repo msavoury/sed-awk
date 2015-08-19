@@ -36,11 +36,12 @@ If an address is followed by a (!) symbol, then the command will apply to all th
 ####``` [address] s/<pattern>/<replacement>/<flags> ```
 
 Where ```<flags>``` can be:
-- **n** - A number (up to 512) indicating replacement occur on nth pattern
-- **g** - Make changes globally 
-- **p** - Print contents of pattern space 
-- **w (file)** - Write contents of pattern space to file 
-
+```
+n : A number (up to 512) indicating replacement occur on nth pattern
+g : Make changes globally 
+p : Print contents of pattern space 
+w (file) : Write contents of pattern space to file 
+```
 #### Replacement characters ####
 - **&** is used for the match made
 - **\n** is for the nth match (based on pairs of parens in the pattern)
